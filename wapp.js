@@ -11,7 +11,7 @@ const options = {
     headers: {},
     maxDepth: 3,
     maxUrls: 10,
-    maxWait: 5000,
+    maxWait: 10000,
     recursive: true,
     probe: false,
     userAgent: 'Wappalyzer',
