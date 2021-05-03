@@ -11,7 +11,7 @@ http://localhost:3000/api/wapp/ <br />
 with body of request as: <br />
 
 {
-  "url": "http://amazon.com"
+  "url": "http://youtube.com"
 } 
 <br />
 The response will be JSON object of technologies used to build the website and related metadata.<br />
