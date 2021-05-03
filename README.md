@@ -1,0 +1,2 @@
+# wapplayzer
+API for wappalyzer
