@@ -12,6 +12,6 @@ with body of request as:
 
 {
   "url": "http://amazon.com"
-}
+} 
 
 The response will be JSON object of technologies used to build the website and related metadata.
