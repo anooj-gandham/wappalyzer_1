@@ -1,17 +1,14 @@
-# wapplayzer
-API for wappalyzer
-<br />
-git clone https://github.com/anooj-gandham/wappalyzer_1.git<br />
-npm install (install the required dependencies)<br />
-node wapp.js or nodemon wapp.js (runs the backend server on the alotted port or 3000)<br />
-<br />
-In POSTMAN, send a post request to <br />
-http://localhost:3000/api/wapp/ <br />
-<br />
-with body of request as: <br />
+# wappalyzer
+Frontend and Backend for getting the technologies used to build a website.<br/>
 
-{
-  "url": "http://youtube.com"
-} 
-<br />
-The response will be JSON object of technologies used to build the website and related metadata.<br />
+<ol>
+  <li>Clone the repository. git clone https://github.com/anooj-gandham/wappalyzer_1</li>
+  <li>cd wapp_ui</li>
+  <li>npm install</li>
+  <li>cd ../wapp_backend/</li>
+  <li>npm install</li>
+  <li>node wapp.js</li>
+  <li>In another terminal,<br/> cd wapp_ui</li>
+  <li>yarn start</li>
+  <li>The UI can be accesed at http://localhost:3000 </li>    
+</ol>
