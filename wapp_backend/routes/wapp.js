@@ -1,8 +1,6 @@
 const express = require("express");
+const router = express.Router();
 const Wappalyzer = require("wappalyzer");
-const app = express();
-
-app.use(express.json());
 
 const options = {
   debug: false,
@@ -19,14 +17,7 @@ const options = {
 };
 const wappalyzer = new Wappalyzer(options);
 
-// app.post('/api/url/', (req,res) => {
-//     console.log(1);
-//     var url = req.body.url;
-//     var result = get_wapp(url);
-//     res.send(result);
-// });
-
-app.post("/api/wapp", async (req, res) => {
+router.post("/", async (req, res) => {
   console.log(req.body.url);
   try {
     await wappalyzer.init();
@@ -41,5 +32,4 @@ app.post("/api/wapp", async (req, res) => {
   await wappalyzer.destroy();
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Listening on port ${port}`));
+module.exports = router;
