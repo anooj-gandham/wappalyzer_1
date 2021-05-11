@@ -6,25 +6,33 @@ const axios = require("axios");
 class Form extends Component {
   state = {
     url: "",
-    data: [{ name: "", website: "", confidence: "" }],
+    data: [{ name: "error", website: "", confidence: "" }],
     pointer: "pointer",
     disableButton: true,
+    checkUrl: "",
   };
 
   async submitClick(url) {
-    console.log(url);
     this.setState({ pointer: "wait", disableButton: "true" });
     await axios
       .post("/api/wapp/", {
         url: url,
       })
       .then((response) => {
-        this.setState({
-          data: response.data,
-          pointer: "pointer",
-          disableButton: "",
-          checkUrl: "",
-        });
+        if (response.data[0].name === "error")
+          this.setState({
+            data: response.data,
+            pointer: "default",
+            disableButton: true,
+            checkUrl: "Please check URL",
+          });
+        else
+          this.setState({
+            data: response.data,
+            pointer: "pointer",
+            disableButton: false,
+            checkUrl: "",
+          });
       });
   }
   render() {
@@ -36,29 +44,33 @@ class Form extends Component {
           onChange={(e) => {
             const url = e.target.value;
             this.setState({ url });
-            console.log(isUrl(url));
             if (!isUrl(url))
               this.setState({
                 checkUrl: "Please check URL",
-                disableButton: "disabled",
+                disableButton: true,
               });
-            if (isUrl(url)) this.setState({ checkUrl: "", disableButton: "" });
+            if (isUrl(url))
+              this.setState({ checkUrl: "", disableButton: false });
           }}
         />
         <button
           style={{ cursor: this.state.pointer }}
           className={"m-2"}
-          disabled={this.state.disableButton}
+          disabled={this.state.disableButton ? 1 : 0}
           onClick={() => {
             this.submitClick(this.state.url);
           }}
         >
           Submit
         </button>
-        <span className={"m-2 btn-danger"}>{this.state.checkUrl}</span>
+        {this.state.checkUrl ? (
+          <span className={"m-2 btn-danger"}>Please check the URL</span>
+        ) : (
+          <span></span>
+        )}
         <br />
         Example: http://yahoo.com <br />
-        {this.state.data[0].name ? (
+        {this.state.data[0].name !== "error" ? (
           <Table data={this.state.data} />
         ) : (
           <span></span>

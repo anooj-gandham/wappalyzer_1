@@ -8,7 +8,7 @@ const options = {
   headers: {},
   maxDepth: 3,
   maxUrls: 10,
-  maxWait: 10000,
+  maxWait: 30000,
   recursive: true,
   probe: false,
   userAgent: "Wappalyzer",
@@ -19,15 +19,21 @@ const wappalyzer = new Wappalyzer(options);
 
 router.post("/", async (req, res) => {
   console.log(req.body.url);
+  var url = req.body.url;
   try {
     await wappalyzer.init();
     const headers = {};
-    const site = await wappalyzer.open(req.body.url, headers);
+    const err = [{ name: "error", website: "", confidence: "" }];
+    const site = await wappalyzer.open(url, headers);
     const results = await site.analyze();
-    console.log(results.technologies);
-    res.send(results.technologies);
+    const output = results.technologies;
+    if (Object.keys(output).length === 0) {
+      res.send(err);
+    } else {
+      res.send(output);
+    }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
   await wappalyzer.destroy();
 });
