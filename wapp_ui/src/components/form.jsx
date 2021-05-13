@@ -37,10 +37,11 @@ class Form extends Component {
   }
   render() {
     return (
-      <div>
+      <div className={"App"}>
         <h3>Enter URL:</h3>
         <input
           type="text"
+          accept={true}
           onChange={(e) => {
             const url = e.target.value;
             this.setState({ url });
@@ -63,6 +64,7 @@ class Form extends Component {
         >
           Submit
         </button>
+        <br />
         {this.state.checkUrl ? (
           <span className={"m-2 btn-danger"}>Please check the URL</span>
         ) : (
