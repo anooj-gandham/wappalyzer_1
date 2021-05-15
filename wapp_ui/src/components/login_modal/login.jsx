@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./login.css";
+import "../cssUI.css";
 
 export const Modal = ({ show, close }) => {
   return (
@@ -21,25 +21,25 @@ export const Modal = ({ show, close }) => {
         <div className="modal-body">
           <h4>Login Form</h4>
           <p>
-            <div className="modal-content-fields">
-              <span>Email*</span>
-              <input />
+            <div>
+              <input placeholder="Email" className="loginInput" />
               <br />
-              <span>Name*</span>
-              <input />
+              <input
+                placeholder="Password"
+                type="password"
+                className="loginInput"
+              />
               <br />
-              <span>Password*</span>
-              <input />
+              <button onClick={close} className="loginButton">
+                Login
+              </button>
               <br />
             </div>
           </p>
         </div>
-        <Link to="/signup">New user, Register here.</Link>
-        <div className="modal-footer">
-          <button onClick={close} className="btn-cancel">
-            Close
-          </button>
-        </div>
+        <Link to="/signup" className="newUserLink">
+          New user, Register here.
+        </Link>
       </div>
     </div>
   );

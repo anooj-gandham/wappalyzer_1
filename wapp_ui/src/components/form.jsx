@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Table from "./table";
+import "./cssUI.css";
 const isUrl = require("is-valid-http-url");
 const axios = require("axios");
 
@@ -9,7 +10,7 @@ class Form extends Component {
     data: [{ name: "error", website: "", confidence: "" }],
     pointer: "pointer",
     disableButton: true,
-    checkUrl: "",
+    checkUrl: "inputUrl",
   };
 
   async submitClick(url) {
@@ -24,39 +25,45 @@ class Form extends Component {
             data: response.data,
             pointer: "default",
             disableButton: true,
-            checkUrl: "Please check URL",
+            checkUrl: "inputUrl1",
           });
         else
           this.setState({
             data: response.data,
             pointer: "pointer",
             disableButton: false,
-            checkUrl: "",
+            checkUrl: "inputUrl",
           });
       });
   }
   render() {
     return (
-      <div className={"App"}>
-        <h3>Enter URL:</h3>
+      <div className="formBody">
+        <img
+          src="https://image.flaticon.com/icons/png/512/2435/2435014.png"
+          className="icon"
+          align="left"
+          alt="Logo"
+        />
         <input
+          placeholder="Enter URL, http://xyz.abc/pqr"
+          className={this.state.checkUrl}
           type="text"
-          accept={true}
           onChange={(e) => {
             const url = e.target.value;
             this.setState({ url });
             if (!isUrl(url))
               this.setState({
-                checkUrl: "Please check URL",
+                checkUrl: "inputUrl1",
                 disableButton: true,
               });
             if (isUrl(url))
-              this.setState({ checkUrl: "", disableButton: false });
+              this.setState({ checkUrl: "inputUrl", disableButton: false });
           }}
         />
         <button
           style={{ cursor: this.state.pointer }}
-          className={"m-2"}
+          className="submitUrlButton"
           disabled={this.state.disableButton ? 1 : 0}
           onClick={() => {
             this.submitClick(this.state.url);
@@ -65,13 +72,12 @@ class Form extends Component {
           Submit
         </button>
         <br />
-        {this.state.checkUrl ? (
+        {/* {this.state.checkUrl ? (
           <span className={"m-2 btn-danger"}>Please check the URL</span>
         ) : (
           <span></span>
         )}
-        <br />
-        Example: http://yahoo.com <br />
+        <br /> */}
         {this.state.data[0].name !== "error" ? (
           <Table data={this.state.data} />
         ) : (

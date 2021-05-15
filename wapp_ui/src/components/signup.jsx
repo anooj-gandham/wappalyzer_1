@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./cssUI.css";
 const axios = require("axios");
 
 class Signup extends Component {
@@ -40,56 +40,60 @@ class Signup extends Component {
 
   render() {
     return (
-      <div>
-        <h2 className="App">Registration</h2>
-        <div>
-          <label>Name</label>
+      <div className="signupBody">
+        <h2 className="signupHeader">Registration</h2>
+        <div className="box">
           <input
             type="text"
             id="name"
+            className="signupInput"
+            placeholder="Name"
             onChange={(e) => {
               this.valueHandler(e.target);
             }}
           />
           <br />
-          <label>User ID</label>
           <input
             type="text"
             id="userid"
+            className="signupInput"
+            placeholder="UserID"
             onChange={(e) => {
               this.valueHandler(e.target);
             }}
           />
           <br />
-          <label>Mobile</label>
           <input
             type="text"
-            minimum="10"
             id="mobile"
+            className="signupInput"
+            placeholder="Mobile"
             onChange={(e) => {
               this.valueHandler(e.target);
             }}
           />
           <br />
-          <label>Email</label>
           <input
             type="email"
             id="email"
+            className="signupInput"
+            placeholder="Email"
             onChange={(e) => {
               this.valueHandler(e.target);
             }}
           />
           <br />
-          <label>Password</label>
           <input
             type="password"
             id="password"
+            className="signupInput"
+            placeholder="Password"
             onChange={(e) => {
               this.valueHandler(e.target);
             }}
           />
           <br />
-          <button onClick={this.onSubmit} className="btn-primary m-2">
+          <button onClick={this.onSubmit} className="signupButton">
             Submit
           </button>
         </div>
