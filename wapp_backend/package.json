@@ -10,9 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browserless": "*",
     "express": "^4.17.1",
+    "get-html": "^1.1.0",
+    "html-get": "^2.8.21",
     "joi": "^13.1.0",
     "mongoose": "^5.12.8",
+    "simple-wappalyzer": "^1.1.26",
     "url-file-size": "^1.0.0",
     "wappalyzer": "^6.5.35"
   }
