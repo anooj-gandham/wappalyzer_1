@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Varnish",
+    "slug": "varnish",
+    "categories": [
+      {
+        "id": 23,
+        "slug": "caching",
+        "name": "Caching",
+        "priority": 7
+      }
+    ],
+    "confidence": 100,
+    "version": "",
+    "icon": "Varnish.svg",
+    "website": "http://www.varnish-cache.org",
+    "cpe": null
+  },
+  {
+    "name": "Stimulus",
+    "slug": "stimulus",
+    "categories": [
+      {
+        "id": 12,
+        "slug": "javascript-frameworks",
+        "name": "JavaScript frameworks",
+        "priority": 8
+      }
+    ],
+    "confidence": 100,
+    "version": "",
+    "icon": "Stimulus.png",
+    "website": "https://stimulusjs.org/",
+    "cpe": null
+  },
+  {
+    "name": "Fastly",
+    "slug": "fastly",
+    "categories": [
+      {
+        "id": 31,
+        "slug": "cdn",
+        "name": "CDN",
+        "priority": 9
+      }
+    ],
+    "confidence": 100,
+    "version": "",
+    "icon": "Fastly.svg",
+    "website": "https://www.fastly.com",
+    "cpe": null
+  },
+  {
+    "name": "Gravatar",
+    "slug": "gravatar",
+    "categories": [
+      {
+        "id": 19,
+        "slug": "miscellaneous",
+        "name": "Miscellaneous",
+        "priority": 9
+      }
+    ],
+    "confidence": 100,
+    "version": "",
+    "icon": "Gravatar.png",
+    "website": "http://gravatar.com",
+    "cpe": null
+  },
+  {
+    "name": "jQuery",
+    "slug": "jquery",
+    "categories": [
+      {
+        "id": 59,
+        "slug": "javascript-libraries",
+        "name": "JavaScript libraries",
+        "priority": 9
+      }
+    ],
+    "confidence": 100,
+    "version": "",
+    "icon": "jQuery.svg",
+    "website": "https://jquery.com",
+    "cpe": "cpe:/a:jquery:jquery"
+  }
+]

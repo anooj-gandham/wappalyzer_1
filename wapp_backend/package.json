@@ -10,14 +10,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "browserless": "*",
     "express": "^4.17.1",
     "get-html": "^1.1.0",
     "html-get": "^2.8.21",
     "joi": "^13.1.0",
+    "jsdom": "^16.5.3",
+    "jssoup": "^0.0.12",
+    "lodash": "^4.17.21",
     "mongoose": "^5.12.8",
-    "simple-wappalyzer": "^1.1.26",
+    "simple-wappalyzer": "^1.1.27",
     "url-file-size": "^1.0.0",
-    "wappalyzer": "^6.5.35"
+    "wappalyzer": "^6.5.35",
+    "x-ray": "^2.3.4"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
   }
 }
