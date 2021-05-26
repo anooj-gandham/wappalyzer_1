@@ -1,15 +1,14 @@
-import "./App.css";
+// import "./App.css";
 import { Route, Switch, Redirect } from "react-router-dom";
 import React, { useState } from "react";
 import Home from "./components/home";
 import NotFound from "./components/notfound";
-// import SignupPage from "./components/signuppage";
 import Signup from "./components/signup";
 
 function App() {
   return (
     <div>
-      <div className="content">
+      <div>
         <Switch>
           <Route path="/home" component={Home} />
           {/* <Route path="/signup" component={Signup} /> */}

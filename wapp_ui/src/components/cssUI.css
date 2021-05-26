@@ -1,0 +1,334 @@
+:root {
+  --or: #ea3808;
+  --wh: #f4f3ee;
+  --bl: #0191b4;
+  --db: #232220;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* home */
+
+.formBody {
+  z-index: -1;
+  background: url("https://wallpaperaccess.com/full/1630867.jpg");
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+
+.inputUrl {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 60%;
+  margin-top: 5px;
+  height: 50px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border: 2.5px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 20px;
+}
+
+.inputUrl:focus {
+  border: 2.5px solid var(--db);
+  border-radius: 20px;
+}
+
+.inputUrl1 {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 60%;
+  margin-top: 5px;
+  height: 50px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  background: #edc7bf;
+  border: 2.5px solid #c04e35;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 20px;
+}
+
+.inputUrl1:focus {
+  border: 2.5px solid #c04e35;
+  border-radius: 20px;
+}
+
+.submitUrlButton {
+  border-radius: 12px;
+  padding: 8px 10px;
+  margin: 10px;
+  color: var(--wh);
+  background: var(--db);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.submitUrlButton:hover {
+  border-radius: 12px;
+  padding: 8px 10px;
+  margin: 10px;
+  background-color: var(--or);
+  color: var(--wh);
+}
+
+/* Signup */
+
+.signupBody {
+  background: url("https://wallpaperaccess.com/full/1630867.jpg");
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+}
+
+.signupHeader {
+  font-family: "Times New Roman", Times, serif;
+  position: absolute;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 43%;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--wh);
+}
+.box {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  right: 30%;
+  top: 20%;
+  border-radius: 10px;
+  border: 3px outset var(--db);
+  width: 40%;
+  background-color: white;
+}
+
+.signupInput {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10px;
+  height: 50px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 2.5px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 15px;
+}
+
+.signupInput:focus {
+  border: 2.5px solid var(--db);
+}
+
+.signupButton {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 50px;
+  box-sizing: border-box;
+  color: var(--wh);
+  font-weight: 700;
+  background-color: var(--bl);
+  border: 3px solid var(--bl);
+  outline: none;
+  border-radius: 15px;
+}
+
+.signupButton:hover {
+  background: var(--or);
+  border: 3px solid var(--or);
+}
+/* Table */
+
+.techused {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: var(--wh);
+  margin-left: 2%;
+  text-align: left;
+}
+
+.tableHeadRow {
+  background: #505050;
+  background: -moz-linear-gradient(top, #505050 0%, #121212 100%);
+  background: -webkit-linear-gradient(top, #505050 0%, #121212 100%);
+  background: linear-gradient(to bottom, #505050 0%, #121212 100%);
+  color: var(--wh);
+  height: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.tableRow {
+  height: 40px;
+  color: var(--wh);
+  background: #181818;
+  border-bottom: 1px solid #404040;
+}
+
+.tableRow:hover {
+  background-color: #404040;
+}
+
+.thname {
+  width: 25%;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.thtype {
+  width: 40%;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.tableCell {
+  padding-left: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.table_css {
+  margin-left: 6%;
+}
+
+/* login */
+
+.newUserLink {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--bl);
+}
+
+.btn-openModal {
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--db);
+  color: var(--wh);
+  border-radius: 12px;
+  padding: 8px 10px;
+  margin: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 0.5%;
+}
+
+.btn-openModal:hover {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--or);
+}
+
+.modal-wrapper {
+  background: #fff;
+  width: 60%;
+  height: 50%;
+  max-width: 800px;
+  margin: auto;
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 15%;
+  right: 20%;
+  /* top: 40%; */
+}
+
+.modal-header {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--db);
+  font-size: 100%;
+  height: 50px;
+  color: var(--wh);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header span {
+  cursor: pointer;
+}
+
+.modal-header p {
+  margin-top: 15px;
+  font-size: 175%;
+}
+
+.modal-content {
+  padding: 1.5rem 1rem;
+}
+
+.modal-body h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  color: var(--db);
+  text-align: center;
+}
+
+.modal-body p {
+  font-size: 1rem;
+  background: var(--wh);
+  color: var(--db);
+  padding: 1rem;
+  margin: 25px 0 0 0;
+}
+
+.loginInput {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10px;
+  padding-left: 10px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2.5px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 10px;
+}
+
+.loginInput:focus {
+  border: 2.5px solid var(--db);
+}
+
+.loginButton {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background-color: #e73323;
+  border: 2px solid #e73323;
+  border-radius: 15px;
+  color: var(--wh);
+}
+
+.loginButton:hover {
+  background: var(--bl);
+  border-color: var(--bl);
+}
+.back-drop {
+  z-index: 0;
+  background: rgba(63, 61, 61, 0.692);
+  height: 100%;
+  position: fixed;
+  transition: all 1.3s;
+  width: 100%;
+}
